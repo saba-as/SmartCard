@@ -1,6 +1,6 @@
 @extends('layout.app')
 
-@section('pageTitle', 'الطلاب')
+@section('pageTitle', 'تعديل الطالب')
 
 @section('content')
 
@@ -8,13 +8,11 @@
     <div
         class="fixed top-0 w-screen z-50 flex px-32 py-4 border-b bg-white backdrop-blur-xl bg-opacity-40 justify-between items-center">
         <h2 class="text-2xl leading-tight text-gray-700 font-semibold flex items-center">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
-            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+              </svg>
             <span class="mr-1">
-                اضافة طالب
+                تعديل طالب
             </span>
         </h2>
         <a href="{{ route('students') }}"
@@ -31,40 +29,33 @@
     </div>
 
 
-    <div class="mt-24 h-screen">
+    <div class="mt-24">
         <div class="m-auto md:col-span-2 w-8/12 border bg-white rounded-xl">
-
-            @if ($errors->any())
-                {!! implode('', $errors->all('<div>:message</div>')) !!}
-            @endif
-
-
-            <form action="{{ route('addNewStudent') }}" method="POST" enctype="multipart/form-data">
-                @csrf
+            <form action="#" method="POST">
                 <div class="shadow overflow-hidden sm:rounded-md">
                     <div class="px-4 py-5 sm:p-6">
                         <div class="grid grid-cols-6 gap-6">
                             <div class="col-span-6 sm:col-span-3">
-                                <label for="name" class="block text-sm font-medium text-gray-700">اسم الطالب</label>
-                                <input type="text" name="name" id="name"
+                                <label for="first-name" class="block text-sm font-medium text-gray-700">اسم الطالب</label>
+                                <input type="text" name="first-name" id="first-name" autocomplete="given-name"
                                     class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 border block w-full shadow-sm sm:text-sm border-gray-300 px-3 py-2 rounded-md">
                             </div>
 
                             <div class="col-span-6 sm:col-span-3">
-                                <label for="department" class="block text-sm font-medium text-gray-700">القسم</label>
-                                <input type="text" name="department" id="department"
+                                <label for="last-name" class="block text-sm font-medium text-gray-700">القسم</label>
+                                <input type="text" name="first-name" id="first-name" autocomplete="given-name"
                                     class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 border block w-full shadow-sm sm:text-sm border-gray-300 px-3 py-2 rounded-md">
                             </div>
 
                             <div class="col-span-6 sm:col-span-3">
-                                <label for="id_number" class="block text-sm font-medium text-gray-700">رقم الهوية</label>
-                                <input type="text" name="id_number" id="id_number"
+                                <label for="first-name" class="block text-sm font-medium text-gray-700">رقم الهوية</label>
+                                <input type="text" name="first-name" id="first-name" autocomplete="given-name"
                                     class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 border block w-full shadow-sm sm:text-sm border-gray-300 px-3 py-2 rounded-md">
                             </div>
 
                             <div class="col-span-6 sm:col-span-3">
-                                <label for="study" class="block text-sm font-medium text-gray-700">الدراسة</label>
-                                <select id="study" name="study"
+                                <label for="last-name" class="block text-sm font-medium text-gray-700">الدراسة</label>
+                                <select id="country" name="country" autocomplete="country-name"
                                     class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 border block w-full shadow-sm sm:text-sm border-gray-300 px-3 py-1 rounded-md">
                                     <option>الدراسة الصباحية</option>
                                     <option>الدراسة المسائية</option>
@@ -72,16 +63,15 @@
                             </div>
 
                             <div class="col-span-6 sm:col-span-3">
-                                <label for="expire_at" class="block text-sm font-medium text-gray-700">تاريخ
+                                <label for="first-name" class="block text-sm font-medium text-gray-700">تاريخ
                                     الانتهاء</label>
-                                <input type="date" name="expire_at" id="expire_at"
+                                <input type="date" name="first-name" id="first-name" autocomplete="given-name"
                                     class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 border block w-full shadow-sm sm:text-sm border-gray-300 px-3 py-2 rounded-md">
                             </div>
 
                             <div class="col-span-6 sm:col-span-3">
-                                <label for="student_status" class="block text-sm font-medium text-gray-700">حالة
-                                    الطالب</label>
-                                <select id="student_status" name="student_status"
+                                <label for="last-name" class="block text-sm font-medium text-gray-700">حالة الطالب</label>
+                                <select id="country" name="country" autocomplete="country-name"
                                     class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 border block w-full shadow-sm sm:text-sm border-gray-300 px-3 py-1 rounded-md">
                                     <option>طالب</option>
                                     <option>متخرج</option>
@@ -103,15 +93,16 @@
                                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                         </svg>
                                         <div class="flex text-sm justify-center text-gray-600">
-                                            <label for="image"
+                                            <label for="file-upload"
                                                 class="text-center relative cursor-pointer bg-white rounded-md font-medium text-indigo-600 hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
                                                 <span>تحميل الملف</span>
-                                                <input id="image" name="image" type="file" class="sr-only" />
+                                                <input id="file-upload" name="file-upload" type="file"
+                                                    class="sr-only" />
                                             </label>
                                         </div>
                                         <p class="text-xs text-gray-500">
                                             الملفات المسموح بها
-                                            PNG, JPG حتى 10MB
+                                            PNG, JPG حتى  10MB
                                         </p>
                                     </div>
                                 </div>
@@ -122,7 +113,7 @@
                     <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
                         <button type="submit"
                             class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                            اضافة
+                            تعديل
                         </button>
                     </div>
                 </div>

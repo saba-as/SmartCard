@@ -27,7 +27,10 @@
                         <a href="{{route('users')}}" class=" @if(Route::current()->getName() == 'users' ) text-blue-500 font-semibold @endif hover:text-blue-500 text-sm">المستخدمين</a>
                     </li>
                     <li class="mr-4">
-                        <a href="" class=" hover:text-blue-500 text-sm">عن سمارت كارد</a>
+                        <a href="{{ route('myAccount')}}" class=" @if(Route::current()->getName() == 'myAccount' ) text-blue-500 font-semibold @endif hover:text-blue-500 text-sm">حسابي</a>
+                    </li>
+                    <li class="mr-4">
+                        <a href="{{route('logout')}}" class=" text-red-500 hover:text-red-800 text-sm">تسجيل خروج</a>
                     </li>
                 </ul>
             </nav>

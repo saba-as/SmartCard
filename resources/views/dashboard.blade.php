@@ -18,7 +18,7 @@
                </div>
                <div class="mr-4 w-7/12">
                    <h1>عدد الطلاب</h1>
-                   <p class="text-3xl font-bold">204</p>
+                   <p class="text-3xl font-bold">{{$data['studentsCount']}}</p>
                </div>
            </div>
    
@@ -31,7 +31,7 @@
              </div>
              <div class="mr-4 w-7/12">
                  <h1>عدد المستخدمين</h1>
-                 <p class="text-3xl font-bold">6</p>
+                 <p class="text-3xl font-bold">{{$data['usersCount']}}</p>
              </div>
          </div>
    
@@ -44,7 +44,7 @@
              </div>
              <div class="mr-4 w-7/12">
                  <h1>طلاب جدد</h1>
-                 <p class="text-3xl font-bold">30</p>
+                 <p class="text-3xl font-bold">{{$data['lastStudentsCount']}}</p>
              </div>
          </div>
         </div>
