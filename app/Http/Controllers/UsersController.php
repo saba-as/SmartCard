@@ -49,7 +49,5 @@ class UsersController extends Controller
 
     }
 
-    public function my_account(){
-        return view('users.myAccount');
-    }
+    
 }

@@ -94,9 +94,9 @@
                                     @if ($user->id == Auth::user()->id)
                                     <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                                         <div>
-                                            <a href="{{route('myAccount')}}" class="text-slate-500 hover:text-indigo-900">
-                                                الذهاب الى حسابي
-                                            </a>
+                                            <div class="text-slate-500 hover:text-indigo-900">
+                                                لا يمكنك حذف حسابك
+                                            </div>
 
                                         </div>
                                     </td>

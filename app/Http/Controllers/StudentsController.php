@@ -60,4 +60,13 @@ class StudentsController extends Controller
     {
         return view('students.update');
     }
+
+   public function getStudent($id){
+        $student = Student::Where('id_number', $id)->first();
+        if($student){
+            return response()->json($student);
+        }else{
+            return response()->json(['error' => 'not found'], 404);
+        }
+    }  
 }

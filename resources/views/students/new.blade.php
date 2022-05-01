@@ -1,6 +1,6 @@
 @extends('layout.app')
 
-@section('pageTitle', 'الطلاب')
+@section('pageTitle', 'اضافة طالب')
 
 @section('content')
 

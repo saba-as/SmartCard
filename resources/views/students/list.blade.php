@@ -69,15 +69,15 @@
                                     <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                                         <div class="flex items-center">
                                             <div class="flex-shrink-0">
-                                                <a href="#" class="block relative">
+                                                <a href="{{route('profile',['id' => $student->id])}}" class="block relative">
                                                     <img alt="profil" src=" {{ $student->image }}"
                                                         class="mx-auto object-cover rounded-full h-10 w-10 " />
                                                 </a>
                                             </div>
                                             <div class="mr-3">
-                                                <p class="text-gray-900 whitespace-no-wrap">
+                                                <a href="{{route('profile',['id' => $student->id])}}" class="text-gray-900 whitespace-no-wrap hover:text-indigo-500">
                                                     {{ $student->name }}
-                                                </p>
+                                                </a>
                                             </div>
                                         </div>
                                     </td>
@@ -137,8 +137,8 @@
 
 
 
-
     @include('layout.navbar')
 
 
 @endsection
+

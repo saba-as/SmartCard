@@ -9,13 +9,8 @@
     <div
         class="fixed top-0 w-screen z-50 flex px-32 py-4 border-b bg-white backdrop-blur-xl bg-opacity-40 justify-between items-center">
         <h2 class="text-2xl leading-tight text-gray-700 font-semibold flex items-center">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
-            </svg>
             <span class="mr-1">
-                اضافة طالب
+                معلومات الطالب : {{$student->name}}
             </span>
         </h2>
         <a href="{{ route('students') }}"
@@ -47,9 +42,10 @@
                         <div class="mt-1">{{ $student->study }}</div>
                         <div class="flex items-center mt-4">
                             <div class="ml-3">رقم الهوية</div>
-                            <div class="px-3 py-1 rounded border-dashed border-slate-900  border-2 ">{{$student->id_number}}</div>
+                            <div class="px-3 py-1 rounded border-dashed border-slate-900  border-2 ">
+                                {{ $student->id_number }}</div>
                         </div>
-                    
+
                     </div>
                 </div>
 
@@ -58,14 +54,14 @@
                     <div>حالة الطالب</div>
 
                     <div class="px-3 py-1 font-semibold rounded-lg text-center text-green-900 bg-green-200 leading-tight">
-                      
-                 
-               
-                            {{ $student->student_status }}
-                 
+
+
+
+                        {{ $student->student_status }}
+
                     </div>
 
-                   
+
 
                 </div>
 
@@ -73,10 +69,11 @@
 
 
 
-
         </div>
+        
     </div>
 
+    
 
 
 

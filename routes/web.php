@@ -40,10 +40,5 @@ Route::middleware('auth')->prefix('/')->group(function () {
         Route::get('/delete/{id}', [UsersController::class, 'delete_user'])->name('deleteUser');
         
     });
-    Route::prefix('account')->group(function () {
-
-        Route::get('/', [UsersController::class, 'my_account'])->name('myAccount');
-        
-    });
 });
 

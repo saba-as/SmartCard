@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+   
     <title>@yield('pageTitle')</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,6 +15,13 @@
 
 <body>
     @yield('content')
+
+
+    <script src="{{ asset('js/jquery-3.6.0.min.js')}}" language="JavaScript" type="text/javascript" ></script> 
+    <script src="{{ asset('js/html2canvas.min.js')}}" language="JavaScript" type="text/javascript" ></script>
+    <script src="{{ asset('js/html2canvas.js')}}" language="JavaScript" type="text/javascript" ></script> 
+    <script src="{{ asset('js/cardExport.js')}}" language="JavaScript" type="text/javascript" ></script> 
+
 </body>
 
 </html>
